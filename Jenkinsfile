@@ -4,12 +4,15 @@ pipeline {
    stages {
       stage ('Validation') {
          steps {
-           bat 'C:\Python27\python.exe scope.py'
+          bat '''@echo off
+                     for /f "delims=" %%a in (scope.py) DO ( 
+                       ECHO Line is: %%a
+                     )'''
          }
       }
      stage ('Testingz') {
          steps {
-           bat 'C:\Python27\python.exe nosy.py'
+          bat '"C:\\Python27\\python.exe" nosy.py'
          }
       }
    }
