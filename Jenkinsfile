@@ -4,12 +4,12 @@ pipeline {
    stages {
       stage ('Validation') {
          steps {
-           bat 'python scope.py'
+           bat 'C:\Python27\python.exe scope.py'
          }
       }
      stage ('Testingz') {
          steps {
-           bat 'python nosy.py'
+           bat 'C:\Python27\python.exe nosy.py'
          }
       }
    }
