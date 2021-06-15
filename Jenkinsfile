@@ -2,6 +2,11 @@ pipeline {
    agent any
 
    stages {
+      stage ('Build') {
+         steps {
+          bat 'MSBuild "alac\alac.sln" /property:Configuration=Release /p:OutputPath="C:\release\alac"'
+         }
+      }
       stage ('Validation') {
          steps {
           bat '''@echo off
