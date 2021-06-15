@@ -4,7 +4,7 @@ pipeline {
    stages {
       stage ('Build') {
          steps {
-          bat 'MSBuild "alac\alac.sln" /property:Configuration=Release /p:OutputPath="C:\release\alac"'
+          bat 'MSBuild "alac\\alac.sln" /property:Configuration=Release /p:OutputPath="C:\\release\\alac"'
          }
       }
       stage ('Validation') {
